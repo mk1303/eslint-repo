@@ -1,0 +1,32 @@
+{
+  "name": "lintcheck",
+  "version": "1.0.0",
+  "description": "N/A",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.jsx": [
+      "eslint"
+    ]
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.34.3",
+    "react": "^18.3.1"
+  }
+}
