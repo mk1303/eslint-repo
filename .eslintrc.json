@@ -1,0 +1,40 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": ["standard", "plugin:react/recommended"],
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true // Enable JSX
+      }
+    },
+    "plugins": ["react"],
+    "ignorePatterns": ["public/"],
+    "globals": {
+        "CAMU_PAYLOAD_ERROR": true
+    },
+    "rules": {
+      "indent": "off",
+      "spaced-comment": "off",
+      "space-before-function-paren": "off",
+      "semi": ["error", "always"],
+      "multiline-ternary": "off",
+      "react/prop-types": "off", // Disable prop-types checking,
+      "react/no-unknown-property": [
+        "error",
+        {
+          "ignore": ["eventKey"]
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+  
